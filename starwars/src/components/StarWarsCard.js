@@ -6,16 +6,18 @@ import styled from 'styled-components';
 
 
 const Wrapper = styled.section`
-  width: 200px;
+  width: 250px;
   padding: 20px;
   margin: 0 auto 20px;
+  border-radius: 10px;
+  border: solid 3px #5C240F;
+  opacity: 0.75;
   background: papayawhip;
 `;
 
 function StarWarsCard () {
 
   const [newCard, setNewCard] = useState([]);
-
 
   useEffect(() => {
     axios.get('https://swapi.co/api/people/').then(response => {
